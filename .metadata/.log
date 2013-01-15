@@ -36,3 +36,6 @@ Caused by: java.util.NoSuchElementException
 
 !ENTRY org.eclipse.cdt.core 1 0 2013-01-15 09:46:26.748
 !MESSAGE Indexed 'smalls' (1 sources, 55 headers) in 0.23 sec: 1,515 declarations; 1,940 references; 3 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.osgi 2 1 2013-01-15 09:47:05.607
+!MESSAGE NLS unused message: CodeAssistPreferencePage_showStub in: org.eclipse.php.internal.ui.PHPUIMessages
