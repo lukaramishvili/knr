@@ -7,7 +7,7 @@
 int main(){
 	int nlength[MAX_WORD_LENGTH], c, state = OUT, i, j, lastlen = 0, maxlen = 0, maxtimes = 0;
 	for(i = 0; i < MAX_WORD_LENGTH; i++) nlength[i]=0;
-	while((c=getchar())!=EOF && c != '0'){/* && c != '0' - eclipse cannot send EOF*/
+	while((c=getchar())!=EOF){/* && c != '0' - eclipse cannot send EOF*/
 		if(' ' == c || '\n' == c || '\t' == c){
 			state=OUT;
 			if(lastlen > 0){
