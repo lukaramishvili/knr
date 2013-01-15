@@ -111,9 +111,22 @@ int main_OneWordPerLine(void){
 }
 
 int main_charHistogram(void){
-	char* charBag = malloc(sizeof(char)*100);
-	charBag[99] = 3;
-	printf("%c", charBag[99]);
+	int c, maxChars = 256, foundChars = 0;
+	char* charBag = malloc(sizeof(char)*maxChars);
+	int* charCounts = malloc(sizeof(int)*maxChars);
+	while((c = getchar()) != EOF && c != '0'){/* && c != '0' - eclipse cannot send EOF*/
+		int indexForChar = 0;
+		if(0 != foundChars){
+			while(indexForChar < foundChars && charBag[indexForChar] != c) { indexForChar++; }
+		}
+		charBag[indexForChar] = c;
+		charCounts[indexForChar]++;
+		if(indexForChar >= foundChars) { foundChars++; }
+	}
+	int i;
+	for(i=0;i<foundChars;i++){
+		printf("%c %d\n",charBag[i], charCounts[i]);
+	}
 	return 0;
 }
 
