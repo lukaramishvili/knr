@@ -110,6 +110,13 @@ int main_OneWordPerLine(void){
 	return 0;
 }
 
+int main_charHistogram(void){
+	char* charBag = malloc(sizeof(char)*100);
+	charBag[99] = 3;
+	printf("%c", charBag[99]);
+	return 0;
+}
+
 int main(void){
-	return main_Testwc();
+	return main_charHistogram();
 }
