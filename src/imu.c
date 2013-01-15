@@ -79,7 +79,7 @@ int main_Testwc(void){
 	FILE *pipe;
 	char c;
 	if((pipe = (FILE*)popen(
-"echo \"More Words now. New words Now.\\n Now is new word. \\nend line 3rd \" | Debug\\wc.exe"
+"echo \"More Words now. New words Now.\\n Now is new word. \\nend line 3rd \" | wc"
 			,"r"))){
 		while((c = fgetc(pipe)) != EOF){
 			printf("%c",c);
@@ -111,5 +111,5 @@ int main_OneWordPerLine(void){
 }
 
 int main(void){
-	return 0;
+	return main_Testwc();
 }
